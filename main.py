@@ -50,8 +50,6 @@ def main():
     try:
         current_date = datetime.now(tz=TZ).strftime("%Y-%m-%d")
         sleep_start_time = get_sleep_start_time(current_date)
-        print(f"Sleep start time: {sleep_start_time}")
-        print(f"Bedtime: {BEDTIME}")
         if sleep_start_time < BEDTIME:
             send_to_beeminder(1, "Early to bed.")
         else:
