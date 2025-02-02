@@ -51,9 +51,9 @@ def main():
         current_date = datetime.now(tz=TZ).strftime("%Y-%m-%d")
         sleep_start_time = get_sleep_start_time(current_date)
         if sleep_start_time < BEDTIME:
-            send_to_beeminder(1, "Early to bed.")
+            send_to_beeminder(1, f"Early to bed ({sleep_start_time}).")
         else:
-            send_to_beeminder(0, "Late to bed.")
+            send_to_beeminder(0, f"Late to bed ({sleep_start_time}).")
     except GarthException:
         send_to_beeminder(0, "Error: log in to Garmin Connect.")
     except AttributeError:
