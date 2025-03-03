@@ -1,5 +1,5 @@
 # Zzz on Time (Beeminder + Garmin Connect)
-This simple Python script checks Garmin Connect to see whether you went to bed on time, and logs this data to your Beeminder goal.
+Log your Garmin Connect sleep data to Beeminder.
 
 ## How to use
 1. Clone this repository.
